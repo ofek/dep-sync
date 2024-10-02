@@ -1,0 +1,62 @@
+[build-system]
+requires = ["hatchling", "hatch-vcs"]
+build-backend = "hatchling.build"
+
+[project]
+name = "dep-sync"
+dynamic = ["version"]
+description = "Synchronize Python environments with dependencies"
+readme = "README.md"
+requires-python = ">=3.8"
+license = "MIT"
+keywords = [
+  "click",
+  "msgspec",
+]
+authors = [
+  { name = "Ofek Lev", email = "oss@ofek.dev" },
+]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Programming Language :: Python",
+  "Programming Language :: Python :: 3.8",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: Implementation :: CPython",
+  "Programming Language :: Python :: Implementation :: PyPy",
+]
+dependencies = [
+  "packaging",
+]
+
+[project.urls]
+Homepage = "https://ofek.dev/dep-sync/"
+Sponsor = "https://github.com/sponsors/ofek"
+Changelog = "https://ofek.dev/dep-sync/changelog/"
+Tracker = "https://github.com/ofek/dep-sync/issues"
+Source = "https://github.com/ofek/dep-sync"
+
+[tool.hatch.version]
+source = "vcs"
+
+[tool.coverage.run]
+source_pkgs = ["dep_sync", "tests"]
+branch = true
+parallel = true
+omit = [
+  "src/dep_sync/__about__.py",
+]
+
+[tool.coverage.paths]
+dep_sync = ["src/dep_sync", "*/dep-sync/src/dep_sync"]
+tests = ["tests", "*/dep-sync/tests"]
+
+[tool.coverage.report]
+show_missing = true
+exclude_lines = [
+  "no cov",
+  "if __name__ == .__main__.:",
+  "if TYPE_CHECKING:",
+]
