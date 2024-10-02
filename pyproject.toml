@@ -13,7 +13,7 @@ keywords = [
   "dependency",
   "environment",
   "sync",
-  "install"
+  "install",
 ]
 authors = [
   { name = "Ofek Lev", email = "oss@ofek.dev" },
