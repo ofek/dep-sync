@@ -10,8 +10,10 @@ readme = "README.md"
 requires-python = ">=3.8"
 license = "MIT"
 keywords = [
-  "click",
-  "msgspec",
+  "dependency",
+  "environment",
+  "sync",
+  "install"
 ]
 authors = [
   { name = "Ofek Lev", email = "oss@ofek.dev" },
