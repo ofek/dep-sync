@@ -1,5 +1,5 @@
 site_name: dep-sync
-site_description: Generate Click options from msgspec types
+site_description: Synchronize Python environments with dependencies
 site_author: Ofek Lev
 site_url: https://ofek.dev/dep-sync/
 repo_name: ofek/dep-sync
